@@ -1,0 +1,271 @@
+/* Previous version */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-horizontal-center {
+    display: flex;
+    justify-content: center;
+}
+
+.relative {
+    position: relative;
+}
+
+.absloute {
+    position: absolute;
+}
+
+.t0 {
+    top: 0;
+}
+
+.r0 {
+    right: 0;
+}
+
+.b0 {
+    bottom: 0;
+}
+
+.l0 {
+    left: 0;
+}
+
+.absloute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.absolute-centerY {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.absolute-centerX {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.relative-center {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.relative-centerY {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+}
+
+.relative-centerX {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+
+/* 2v common css */
+
+.flex {
+    display: flex;
+}
+
+.jc-s {
+    justify-content: flex-start;
+}
+
+.jc-sa {
+    justify-content: space-around;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.ai-s {
+    align-items: flex-start;
+}
+
+.jc-ai-center {
+    justify-content: center;
+    align-items: center;
+}
+
+.as-center {
+    align-self: center;
+}
+
+.flex1 {
+    flex: 1;
+}
+
+.f-column {
+    flex-direction: column;
+}
+
+.f-wrap {
+    flex-wrap: wrap;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.fix {
+    position: fixed;
+}
+
+.font12 {
+    font-size: 12px;
+}
+
+.font13 {
+    font-size: 13px;
+}
+
+.font14 {
+    font-size: 14px;
+}
+
+.font15 {
+    font-size: 15px;
+}
+
+.font16 {
+    font-size: 16px;
+}
+
+.font18 {
+    font-size: 18px;
+}
+
+.font20 {
+    font-size: 20px;
+}
+
+.font22 {
+    font-size: 22px;
+}
+
+.font24 {
+    font-size: 24px;
+}
+
+.font26 {
+    font-size: 26px;
+}
+
+.font28 {
+    font-size: 28px;
+}
+
+.font30 {
+    font-size: 30px;
+}
+
+.font-b {
+    font-weight: bold;
+}
+
+.no-b-l {
+    border-left: none;
+}
+
+.no-b-r {
+    border-right: none;
+}
+
+.no-b-t {
+    border-top: none;
+}
+
+.no-b-b {
+    border-bottom: none;
+}
+
+.circle {
+    border-radius: 50%;
+}
+
+.z99 {
+    z-index: 99;
+}
+
+.z100 {
+    z-index: 100;
+}
+
+.textcenter {
+    text-align: center;
+}
+
+.textright {
+    text-align: right;
+}
+
+.texthide {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.v-middle {
+    vertical-align: middle;
+}
+
+.block {
+    display: block;
+}
+
+.i-block {
+    display: inline-block;
+}
+
+.over-x {
+    overflow-x: hidden;
+}
+
+.over {
+    overflow: hidden;
+}
+
+.fl {
+    float: left;
+}

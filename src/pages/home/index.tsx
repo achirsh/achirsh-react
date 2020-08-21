@@ -1,8 +1,22 @@
 import React from "react";
-// import styles from "./index.module.css";
+import api from "api";
 
 export default class extends React.Component<{}, {}> {
+
+    public componentDidMount() {
+
+    }
+
+    // 接口请求
+    public async getData() {
+        try {
+            const data = await api.demo.getData({ a: 1 })
+        } catch (err) {
+            // 接口请求错误处理
+        }
+    }
+
     public render() {
-        return <div>1ww</div>
+        return <div>Hello world</div>
     }
 }
