@@ -1,0 +1,32 @@
+.container {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.title {
+    width: 100%;
+    height: 50px;
+    color: #f3f3f3;
+    box-sizing: border-box;
+    padding-left: 10px;
+    line-height: 50px;
+    background-color: #293c55;
+}
+
+.container .chart-render {
+    width: 400px;
+    height: 450px;
+}
+
+.container .chart-render .chart-item {
+    width: 400px;
+    height: 400px;
+    overflow: auto;
+    border: 1px solid #666;
+}

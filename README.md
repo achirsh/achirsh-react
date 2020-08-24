@@ -1,20 +1,3 @@
-
 ```
-基于typescript搭建的简易react项目
-
-拉取代码：git clone git@gitlab.com:achirsh/react-study.git
-
-yarn install 初始化项目
-
-yarn start   运行项目
-
-yarn build   部署打包
+新增echarts图表组件，使用方法pages/template/echarts
 ```
-
-```
-api：   接口请求实例
-models：接口/变量模型
-
-
-```
-
