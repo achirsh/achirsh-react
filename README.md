@@ -1,3 +1,4 @@
 ```
-新增echarts图表组件，使用方法pages/template/echarts
+新增echarts图表组件
+例子：/template/chart
 ```

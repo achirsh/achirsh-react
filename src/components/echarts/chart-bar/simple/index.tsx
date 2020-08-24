@@ -66,11 +66,11 @@ export default class extends React.Component<{
             },
             axisLabel: {
                 interval: interval ? interval : 0,
-                rotate: rotate ? rotate: 0,
+                rotate: rotate ? rotate: 0, // x轴label旋转角度
                 lineHeight: 12,
                 margin: margin && margin.xAxis ? margin.xAxis : 8,
                 textStyle: {
-                    color: '#3BB7FF',
+                    color: '#3BB7FF', // x轴value值颜色
                     fontSize: xAxisFont ? xAxisFont : 8,
                     fontFamily: 'Helvetica-Bold,Helvetica'
                 }
@@ -78,7 +78,7 @@ export default class extends React.Component<{
             axisLine: {
                 lineStyle: {
                     type: 'solid',
-                    color: 'rgba(255, 255, 255, 0.4)',
+                    color: 'rgba(255, 255, 255, 0.4)',  // x轴线条颜色
                     width: '0'
                 }
             }
@@ -90,18 +90,18 @@ export default class extends React.Component<{
             },
             max: yAxisMax ? yAxisMax : 100,
             axisLabel: {
-                formatter: yAxisConfig&&yAxisConfig.unit ? `{value}${yAxisConfig.unit}` : `{value}`,
+                formatter: yAxisConfig && yAxisConfig.unit ? `{value}${yAxisConfig.unit}` : `{value}`,
                 lineHeight: 12,
                 margin: margin && margin.yAxis ? margin.yAxis : 8,
                 textStyle: {
-                    color: '#3BB7FF',
+                    color: '#3BB7FF', // y轴value值颜色
                     fontSize: yAxisFont ? yAxisFont : 8,
                     fontFamily: 'Helvetica-Bold,Helvetica'
                 }
             },
             splitLine: {
                 lineStyle: {
-                    color: "rgba(16, 35, 158, 0.5)"
+                    color: "rgba(16, 35, 158, 0.5)"  // y轴线条颜色
                 }
             },
             axisTick: {
@@ -123,10 +123,10 @@ export default class extends React.Component<{
                             { offset: 1, color: item.color[1] },
                         ]
                     ),
-                    borderColor: "#01B0FF",
+                    borderColor: "#01B0FF", // 柱状图描边颜色
                 },
                 emphasis: {
-                    itemStyle: {
+                    itemStyle: item.clickColor ? {
                         color: new echarts.graphic.LinearGradient(
                             0, 0, 0, 1,
                             [
@@ -134,14 +134,14 @@ export default class extends React.Component<{
                                 { offset: 1, color: item.clickColor[1] },
                             ]
                         ),
-                    }
+                    } : null
                 },
-                barWidth: barWidth ? barWidth : 7,
+                barWidth: barWidth ? barWidth : 7,  // 柱状图宽度
             })
         })
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
         overlay ? series[0].barGap = "-100%" : undefined;
-        echartsLegend = {
+        echartsLegend = {     // 右上角legend
             data: legend.map(item => {
                 return {
                     name: item,
@@ -153,10 +153,10 @@ export default class extends React.Component<{
             textStyle: {
                 fontSize: legendFont ? legendFont : 10,
                 fontWeight: 400,
-                color: "rgba(255,255,255,0.4)",
+                color: "rgba(255,255,255,0.4)",  // legend字体颜色
                 fontFamily: 'GenShinGothic-Monospace-Regular'
             },
-            right: "0",
+            right: "8px",
             top: legendTop ? legendTop : '30px'
         }
         const option = {
@@ -164,7 +164,7 @@ export default class extends React.Component<{
             tooltip: {
                 trigger: 'axis',
                 axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-                    type: 'shadow',        // 默认为直线，可选为：'line' | 'shadow'
+                    type: 'line',        // 默认为直线，可选为：'line' | 'shadow'
                     // shadowStyle: {
                     //     color: "rgba(29, 57, 196, 0.3)",
                     // }
@@ -173,9 +173,9 @@ export default class extends React.Component<{
             xAxis,
             yAxis,
             grid: {
-                left: '0',
-                right: '0',
-                bottom: '0',
+                left: 10,
+                right: 10,
+                bottom: 10,
                 containLabel: true,
             },
             series

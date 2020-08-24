@@ -4,17 +4,24 @@ import * as echarts from "echarts";
 
 
 interface yAxisConfig {
-    color: [string, string],
+    color: any,
     data: number[]
     unit?: string,                   // 坐标单位
 }
 
 
 export default class extends React.Component<{
-    legend: { name: [string, string], color: [string, string] }
+    legend: any,
     seriesName?: string
     xData: string[] | number[],
     yData: yAxisConfig,
+    legendFont?: any,
+    itemStyle?: any,
+    interval?: any,
+    rotate?: any,
+    margin?: any,
+    xAxisFont?: any,
+    yAxisFont?: any
 }, {}> {
     private containerRef: any;
     private chartRef: any;
@@ -38,10 +45,11 @@ export default class extends React.Component<{
     }
 
     public draw() {
-        const { yData, xData } = this.props;
+        const { yData, xData, legendFont, itemStyle, legend, interval, rotate, margin, xAxisFont, yAxisFont } = this.props;
         let xAxis = {};
         let yAxis = {};
         let series: any[] = [];
+        let echartsLegend = {};
         const supportData: number[] = [0];
         xAxis = {
             type: 'category',
@@ -50,16 +58,21 @@ export default class extends React.Component<{
                 show: false
             },
             axisLabel: {
+                interval: interval ? interval : 0,
+                rotate: rotate ? rotate: 0, // x轴label旋转角度
+                lineHeight: 12,
+                margin: margin && margin.xAxis ? margin.xAxis : 8,
                 textStyle: {
-                    color: 'rgba(255, 255, 255, 0.4)',//坐标值得具体的颜色
-                    fontSize: 8
+                    color: '#3BB7FF',// x轴value值颜色
+                    fontSize: xAxisFont ? xAxisFont : 8,
+                    fontFamily: 'Helvetica-Bold,Helvetica'
                 }
             },
             axisLine: {
                 lineStyle: {
                     type: 'solid',
-                    color: 'rgba(89,99,120,0.4)',//左边线的颜色
-                    width: '0'//坐标线的宽度
+                    color: 'rgba(16, 35, 158, 0.5)',//左边线的颜色
+                    width: '0' //坐标线的宽度
                 }
             }
         };
@@ -70,14 +83,17 @@ export default class extends React.Component<{
             },
             axisLabel: {
                 formatter: yData.unit ? `{value}${yData.unit}` : `{value}`,
+                lineHeight: 12,
+                margin: margin && margin.yAxis ? margin.yAxis : 8,
                 textStyle: {
-                    color: 'rgba(255, 255, 255, 0.4)',//坐标值得具体的颜色
-                    fontSize: 8
+                    color: '#3BB7FF', // y轴value值颜色
+                    fontSize: yAxisFont ? yAxisFont : 8,
+                    fontFamily: 'Helvetica-Bold,Helvetica'
                 }
             },
             splitLine: {
                 lineStyle: {
-                    color: "rgba(89,99,120,0.15)"
+                    color: "rgba(16, 35, 158, 0.5)"
                 }
             },
             axisTick: {
@@ -124,31 +140,19 @@ export default class extends React.Component<{
             barWidth: 20,
             data: yData.data
         }
-        // let echartsLegend={};
-        //     echartsLegend={
-        //             show:true,
-        //             data:legend.map(item=>{
-        //                 return {
-        //                     name:item,
-        //                     icon:"circle",
-        //                 }
-        //             }),
-        //             // backgroundColor:yData.color[0],
-        //             right:"1%",
-        //             top:"13%"
-        //     }
+
         const option = {
-            // legend:echartsLegend ,
             xAxis,
             yAxis,
             grid: {
-                left: '0',
-                right: '0',
-                bottom: '0',
+                left: 10,
+                right: 10,
+                bottom: 10,
                 containLabel: true,
             },
             series
         };
+        console.log(option)
         this.chart.setOption(option);
 
     }
@@ -157,13 +161,20 @@ export default class extends React.Component<{
     public render() {
         const { legend } = this.props;
         return <div ref={this.containerRef} style={{ height: "100%", position: "relative" }}>
-            <div style={{ position: "absolute", right: "15px", top: "30px" }}>
-                {legend.name.map((item, index) => {
+            <div style={{ position: "absolute", right: "0", top: "30px" }}>
+                {legend.name.map((item: any, index: any) => {
                     return <div style={{ display: "inline-block", marginRight: 10 }} key={index}>
                         <div style={{ height: 4, width: 4, background: `${legend.color[index]}`, 
                         borderRadius: "50%", display: "inline-block", marginRight: 5, 
                         position: "relative", bottom: 1 }} />
-                        <span style={{ fontSize: 8, color: "rgba(255,255,255,0.4)" }}>{item}</span>
+                        <span style={{ 
+                            display: 'inline-block',
+                            fontSize: '12px', 
+                            color: "rgba(255,255,255,0.4)",
+                            transform: 'scale(0.83, 0.83)',
+                            WebkitTransform: 'scale(0.83, 0.83)',
+                            msTransform: 'scale(0.83, 0.83)'
+                        }}>{item}</span>
                     </div>
                 })}
             </div>

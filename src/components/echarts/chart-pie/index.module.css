@@ -1,0 +1,39 @@
+.legendContainer {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.legendContainer table {
+    margin: auto;
+}
+
+.legend>td {
+    height: 17px;
+    padding: 11px 8px;
+    color: rgba(255, 255, 255, .6);
+    text-align: center;
+}
+
+.legend>span:not(:first-child) {
+    padding-left: 20px;
+}
+
+.legendMarker {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+}
+
+.legendName {
+    display: inline-block;
+    /* width: 100px; */
+}
+
+.legendPercent {
+    display: inline-block;
+    /* width: 60px; */
+}
