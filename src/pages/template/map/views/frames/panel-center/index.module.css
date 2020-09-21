@@ -1,0 +1,23 @@
+.containerBase {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(19, 21, 30, 0.7);
+    border-radius: 2px;
+    transition: all .4s;
+}
+
+.container {
+    composes: containerBase;
+    width: 200px;
+    height: 200px;
+}
+
+.containerExpanded {
+    composes: containerBase;
+    width: 0;
+    height: 0;
+}

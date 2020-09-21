@@ -1,0 +1,25 @@
+.containerBase {
+    position: absolute;
+    width: 360px;
+    background: rgba(19, 21, 30, 0.7);
+    /* background: linear-gradient(270deg, rgba(19, 21, 30, 0.7) 0%, rgba(19, 21, 30, 0.4) 100%); */
+    border-radius: 2px;
+    transition: right .4s;
+}
+
+.lightLine {
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 48%, rgba(255, 255, 255, 0) 100%);
+    margin: 0 30px;
+}
+
+.container {
+    composes: containerBase;
+    right: -100%;
+}
+
+.containerExpanded {
+    composes: containerBase;
+    right: 20px;
+}

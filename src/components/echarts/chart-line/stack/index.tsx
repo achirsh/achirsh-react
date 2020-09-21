@@ -42,7 +42,8 @@ export default class extends React.Component<{
     rotate?: any,
     margin?: any,
     xAxisStyle?: any,
-    yAxisStyle?: any
+    yAxisStyle?: any,
+    isVisualMap?: any,
 }, {}> {
     private containerRef: any;
     private chartRef: any;
@@ -87,7 +88,7 @@ export default class extends React.Component<{
 
     public draw() {
         const { yData = [], xData = [], legendFont = 10, xAxisFont = 8, gridBottom, xAxisStyle, yAxisStyle,
-            yAxisFont = 8, interval = null, itemStyle, areaStyle, legendShow, rotate, margin } = this.props;
+            yAxisFont = 8, interval = null, itemStyle, areaStyle, legendShow, rotate, margin, isVisualMap } = this.props;
         let visualMap: any = []
         let colors: any = []
         if (yData.length > 0) {
@@ -133,7 +134,7 @@ export default class extends React.Component<{
                         color: [n.lineColor[1], n.lineColor[0]],
                     }
                 })
-                colors.push(n.lineColor[1])
+                colors.push(n.lineColor[0])
             })
         }
         const option = {
@@ -210,7 +211,7 @@ export default class extends React.Component<{
                 },
             },
             series: this.series,
-            visualMap: visualMap,
+            visualMap: isVisualMap ? visualMap : null,
         };
 
         this.chart.setOption(option);

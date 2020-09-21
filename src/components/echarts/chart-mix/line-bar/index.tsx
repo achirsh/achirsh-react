@@ -106,7 +106,7 @@ export default class extends React.Component<{
                },
                stack: stack ? "one" : undefined,
                symbol: "none",
-               barMaxWidth: 5,
+               barMaxWidth: 10,
             //    barGap: "30%",
            })
        })
