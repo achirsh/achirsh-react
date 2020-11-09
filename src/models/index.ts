@@ -11,12 +11,10 @@ export interface IWorkOrder {
     status: WorkOrderState; // 状态
 }
 
-export interface IPage {
-    total: number;
-    size: number;
+export interface Paged<T> {
     page: number;
-}
-
-export interface IPaged<T> extends IPage {
+    size: number;
+    total: number;
     items: T[];
 }
+

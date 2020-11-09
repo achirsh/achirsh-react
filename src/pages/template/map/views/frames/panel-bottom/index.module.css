@@ -1,0 +1,21 @@
+.containerBase {
+    position: absolute;
+    width: 100%;
+    height: 290px;
+    transition: bottom .3s;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    composes: containerBase;
+    bottom: -100%;
+}
+
+.containerExpanded {
+    composes: containerBase;
+    bottom: 0;
+}
+
+.bc {
+    height: 100%;
+}

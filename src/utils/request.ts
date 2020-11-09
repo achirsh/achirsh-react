@@ -9,21 +9,24 @@ requestIns.interceptors.request.use(
         try {
             // 可以在这里设置token
         } catch (error) {
-            if (isDevelopment) {  // 在开发环境取配置的token
-                try {
-                    const data = require("config/develop");
-                    token = data.token;
+            // if (isDevelopment) {  // 在开发环境取配置的token
+            //     try {
+            //         const data = require("config/develop");
+            //         token = data.token;
 
-                } catch (error) {
-                    //
-                }
-            }
+            //     } catch (error) {
+            //         //
+            //     }
+            // }
         }
 
         if (token) {
             /* tslint:disable:no-string-literal */
-            config.headers["Authorization"] = token;
+            // config.headers["Authorization"] = token;
         }
+
+        config.headers["Authorization"] = '5e18942c-6c12-4b25-ae86-04ee63db0235';
+        config.headers["signature"] = 'c927318a01b9255a29e16ab501701467'
 
         return config;
     },
