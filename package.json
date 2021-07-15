@@ -1,5 +1,6 @@
 {
     "name": "fund",
+    "author": "achirsh",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -15,8 +16,6 @@
         "@types/react-router-dom": "^5.1.4",
         "axios": "^0.20.0",
         "echarts": "^4.8.0",
-        "element-react": "^1.4.34",
-        "element-theme-default": "^1.4.13",
         "react": "^16.13.1",
         "react-amap": "^1.2.8",
         "react-dom": "^16.13.1",
@@ -49,5 +48,8 @@
             "last 1 safari version"
         ]
     },
-    "proxy": "https://store.keliuyun.com"
+    "proxy": "https://store.keliuyun.com",
+    "devDependencies": {
+        "antd": "^4.16.1"
+    }
 }

@@ -4,7 +4,6 @@ import * as ChartGraph from "./echarts/chart-graph";
 import * as ChartMix from "./echarts/chart-mix";
 import * as ChartLine from "./echarts/chart-line";
 import * as ChartPie from "./echarts/chart-pie";
-import ExcelToJson from "./excelToJson"
 
 export { default as Map } from "./map";
 
@@ -14,6 +13,5 @@ export {
     ChartGraph,
     ChartMix,
     ChartLine,
-    ChartPie,
-    ExcelToJson
+    ChartPie 
 }
