@@ -87,11 +87,11 @@ export default class extends React.Component<{
     }
 
     public draw() {
-        const { yData = [], xData = [], legendFont = 10, xAxisFont = 8, gridBottom, xAxisStyle, yAxisStyle,
-            yAxisFont = 8, interval = null, itemStyle, areaStyle, legendShow, rotate, margin, isVisualMap } = this.props;
+        const { yData = [], xData = [], gridBottom, xAxisStyle, yAxisStyle, interval = null, itemStyle, areaStyle, legendShow, rotate, margin, isVisualMap } = this.props;
         let visualMap: any = []
         let colors: any = []
         if (yData.length > 0) {
+            // eslint-disable-next-line array-callback-return
             yData.map(n => {
                 this.series.push({
                     name: n.name,

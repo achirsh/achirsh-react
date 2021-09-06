@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.52cb5223.chunk.css",
+    "main.js": "/static/js/main.f94be9f7.chunk.js",
+    "main.js.map": "/static/js/main.f94be9f7.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.0e59e6f1.js",
+    "runtime-main.js.map": "/static/js/runtime-main.0e59e6f1.js.map",
+    "static/js/2.289bbebe.chunk.js": "/static/js/2.289bbebe.chunk.js",
+    "static/js/2.289bbebe.chunk.js.map": "/static/js/2.289bbebe.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.091b74095faed86f205306650880ea93.js": "/precache-manifest.091b74095faed86f205306650880ea93.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.52cb5223.chunk.css.map": "/static/css/main.52cb5223.chunk.css.map",
+    "static/js/2.289bbebe.chunk.js.LICENSE.txt": "/static/js/2.289bbebe.chunk.js.LICENSE.txt",
+    "static/media/root-area-default.png": "/static/media/root-area-default.71786499.png",
+    "static/media/situation-left-active.png": "/static/media/situation-left-active.e2eca383.png",
+    "static/media/situation-right-active.png": "/static/media/situation-right-active.2070babc.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e59e6f1.js",
+    "static/js/2.289bbebe.chunk.js",
+    "static/css/main.52cb5223.chunk.css",
+    "static/js/main.f94be9f7.chunk.js"
+  ]
+}

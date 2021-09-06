@@ -1,5 +1,5 @@
 import React from "react";
-import api from "api";
+// import api from "api";
 
 export default class extends React.Component<{}, {}> {
 
@@ -10,7 +10,7 @@ export default class extends React.Component<{}, {}> {
     // 接口请求
     public async getData() {
         try {
-            const data = await api.demo.getData({})
+            // const data = await api.demo.getData({})
         } catch (err) {
             // 接口请求错误处理
         }

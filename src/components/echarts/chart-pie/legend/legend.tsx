@@ -2,7 +2,6 @@ import * as React from "react";
 import * as echarts from "echarts";
 import { SeriesItem } from "../index";
 import styles from "../index.module.css";
-import { number } from "prop-types";
 
 interface bStyle {
     font: number,
@@ -133,6 +132,8 @@ export default class extends React.Component<{
                                     marginTop: '2px'
                                 }}>{(o.value > 0 ? o.value / total * 100 : 0).toFixed(2)}%</div>
                             </div>
+                        } else {
+                            return null
                         }
                     })
                 }
@@ -162,6 +163,8 @@ export default class extends React.Component<{
                                     marginTop: '2px'
                                 }}>{(o.value > 0 ? o.value / total * 100 : 0).toFixed(2)}%</div>
                             </div>
+                        } else {
+                            return null
                         }
                     })
                 }

@@ -88,6 +88,7 @@ export default class extends React.Component<{
                 }
             })
         });
+        // eslint-disable-next-line array-callback-return
         barSeries.map((item,index) => {
             series.push({
                name: item.legend,

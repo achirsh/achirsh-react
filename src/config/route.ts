@@ -3,7 +3,6 @@ import HomePage from "pages/home";
 // template
 import ChartPage from "pages/template/echarts"
 import MapPage from "pages/template/map"
-import HookPage from "pages/template/hook"
 
 const defaultRoutes = [
     { path: "/", component: HomePage }

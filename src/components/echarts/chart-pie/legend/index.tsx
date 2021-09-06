@@ -2,7 +2,6 @@ import * as React from "react";
 import * as echarts from "echarts";
 import { SeriesItem } from "../index";
 import styles from "../index.module.css";
-import { number } from "prop-types";
 
 interface bStyle {
     font: number,
@@ -103,7 +102,7 @@ export default class extends React.Component<{
 
     private renderLegend = () => {
         const { colors = [], series = [], lengendStyle } = this.props;
-        const total = series.reduce((a, b) => a + b.value, 0);
+        // const total = series.reduce((a, b) => a + b.value, 0);
         return <div  className={styles.legendContainer} >
             <table>
                 <tbody>

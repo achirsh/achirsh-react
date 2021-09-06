@@ -45,11 +45,11 @@ export default class extends React.Component<{
     }
 
     public draw() {
-        const { yData, xData, legendFont, itemStyle, legend, interval, rotate, margin, xAxisFont, yAxisFont } = this.props;
+        const { yData, xData, interval, rotate, margin, xAxisFont, yAxisFont } = this.props;
         let xAxis = {};
         let yAxis = {};
         let series: any[] = [];
-        let echartsLegend = {};
+        // let echartsLegend = {};
         const supportData: number[] = [0];
         xAxis = {
             type: 'category',
@@ -101,6 +101,7 @@ export default class extends React.Component<{
             }
         }
         let total: number = yData.data[0];
+        // eslint-disable-next-line array-callback-return
         yData.data.map((o, oIn) => {
             if (oIn > 0) {
                 supportData[oIn] = total - o

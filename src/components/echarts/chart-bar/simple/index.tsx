@@ -108,6 +108,7 @@ export default class extends React.Component<{
                 show: false
             }
         }
+        // eslint-disable-next-line array-callback-return
         dataSeries.map((item, index) => {
             series.push({
                 name: item.name,

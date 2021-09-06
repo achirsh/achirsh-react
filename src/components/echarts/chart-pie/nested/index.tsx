@@ -1,7 +1,7 @@
 import * as React from "react";
 import * as echarts from "echarts";
 import { SeriesItem } from "../index";
-import { div, sub, mul, add } from "utils/func";
+import { div, sub } from "utils/func";
 
 export default class extends React.Component<{ colors: string[]; series: SeriesItem[]}, {}> {
     private containerRef: any;
@@ -26,7 +26,7 @@ export default class extends React.Component<{ colors: string[]; series: SeriesI
     public draw = () => {
         const { series = [], colors } = this.props;
 
-        const total = series.reduce((a, b) => add(a, b.value), 0);
+        // const total = series.reduce((a, b) => add(a, b.value), 0);
         const max = Math.max(...series.map(o => o.value));
         const circle = div(max, 8) * 12;
 

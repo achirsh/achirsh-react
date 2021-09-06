@@ -4,9 +4,8 @@ import { Map } from "components"
 import { BaseMap } from "utils/map"
 import { Header } from "./views"
 import { PanelBottom, PanelRight, PanelCenter, DrawMarker, PanelDevice, AreaSelector, SystemFilter } from "./views/frames"
-import { IPanelBottom, ISystem } from "models/map"; 
+import { IPanelBottom } from "models/map"; 
 import styles from "./index.module.css"
-import { systems } from 'config';
 import * as Action from "redux/actions"
 
 const { storeMapLoadStatus }  = Action.Map;
